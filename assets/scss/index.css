@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+header {
+  width: 100%;
+}
+header .headerTop {
+  width: 100%;
+  background-color: #21285f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+header .headerTop .menuBtn {
+  width: 100px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header .headerTop .logo {
+  width: 137px;
+  height: 50px;
+}
+header .headerTop .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .headerTop .contactBtn {
+  font-size: 13px;
+  color: #272634;
+  background-color: #eff4f5;
+  border-radius: 80px;
+  padding: 10px 22px;
+  transition: all 0.5s ease;
+}
+header .headerTop .contactBtn:hover {
+  transform: rotateX(360deg);
+  background-color: #272634;
+  color: #eff4f5;
+}
+header .navBar {
+  width: 100%;
+  padding: 20px 100px 20px 20px;
+  display: flex;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3137254902);
+  background-color: #fff;
+}
+header .navBar .menuBarIcon {
+  display: none;
+}
+header .navBar .menu {
+  width: 50%;
+  display: flex;
+  gap: 5px;
+}
+header .navBar .menu .menuItems {
+  padding: 10px;
+}
+header .navBar .menu .menuItems a {
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+header .navBar .menu .menuItems a.active {
+  color: #fb3236;
+}
+header .navBar .menu .menuItems a:hover {
+  color: #fb3236;
+}
+header .navBar .slideMenu {
+  display: none;
+}
+header .navBar .socialList {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+header .navBar .socialList .socialItem a {
+  color: #a0a2b4;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+header .navBar .socialList .socialItem a:hover {
+  color: #555;
+}
+header .portfolio {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  width: 40%;
+  padding: 5%;
+  background-color: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  z-index: 9999;
+}
+header .portfolio .portfolioTitle {
+  font-size: 44px;
+  font-weight: 700;
+  font-family: "Sora", sans-serif;
+  color: #21285f;
+  text-align: center;
+}
+header .portfolio .categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header .portfolio .categories .categoryItem {
+  padding: 7px 14px;
+  text-align: center;
+}
+header .portfolio .categories .categoryItem a {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Be Vietnam Pro", sans-serif;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+header .portfolio .categories .categoryItem:hover a {
+  color: #ff0004;
+}
+header .portfolio .categories .categoryItem.active a {
+  color: #ff0004;
+}
+header .portfolio .gameDesignList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header .portfolio .gameDesignList .gameDesignItem {
+  width: 100px;
+  height: 100px;
+  border-radius: 7px;
+  margin: 5px;
+  overflow: hidden;
+}
+header .portfolio .gameDesignList .gameDesignItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+header .portfolio .gameDesignList .gameDesignItem:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@media (max-width: 1430px) {
+  header .navBar {
+    padding: 20px 50px 20px 20px;
+  }
+  header .navBar .menu {
+    width: 75%;
+  }
+  header .navBar .socialList {
+    width: 25%;
+  }
+}
+@media (max-width: 950px) {
+  header .navBar {
+    padding: 15px 30px 15px 15px;
+  }
+  header .navBar .menu {
+    width: 70%;
+  }
+  header .navBar .menu .menuItems {
+    padding: 5px;
+  }
+  header .navBar .menu .menuItems a {
+    font-size: 12px;
+  }
+  header .navBar .socialList {
+    width: 30%;
+  }
+}
+@media (max-width: 770px) {
+  header {
+    width: 100%;
+  }
+  header .headerTop {
+    width: 100%;
+  }
+  header .headerTop .menuBtn {
+    width: 100px;
+  }
+  header .headerTop .contactBtn {
+    font-size: 13px;
+  }
+  header .navBar {
+    justify-content: space-between;
+  }
+  header .navBar .menuBarIcon {
+    display: block;
+    padding: 3px 3px;
+  }
+  header .navBar .menuBarIcon i {
+    font-size: 22px;
+  }
+  header .navBar .menuBarIcon span {
+    margin-left: 5px;
+  }
+  header .navBar .menu {
+    display: none;
+  }
+  header .navBar .slideMenu {
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    width: 30%;
+    background-color: #21285f;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3137254902);
+    position: absolute;
+    margin: 8% 0 0 -3%;
+    padding: 20px 10px;
+    z-index: 999;
+  }
+  header .navBar .slideMenu .slideMenuItem {
+    padding: 10px 20px;
+  }
+  header .navBar .slideMenu .slideMenuItem a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  header .navBar .slideMenu .slideMenuItem a.active {
+    color: #fb3236;
+  }
+  header .navBar .slideMenu .slideMenuItem a:hover {
+    color: #fb3236;
+  }
+  header .navBar .slideMenu .liveChatButton {
+    display: inline-block;
+    margin: 20px 0 0 10px;
+    padding: 10px;
+    color: #fb3236;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+  header .navBar .slideMenu .liveChatButton:hover {
+    color: #fff;
+  }
+  header .navBar .socialList {
+    width: 50%;
+  }
+  header .navBar .socialList .socialItem a {
+    color: #a0a2b4;
+  }
+}
+@media (max-width: 570px) {
+  header .navBar .slideMenu .liveChatButton {
+    margin: 20px 0 0 10px;
+    padding: 5px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 550px) {
+  header .headerTop {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  header .headerTop .contactBtn {
+    display: none;
+  }
+  header .headerTop .menuBtn {
+    width: 30px;
+  }
+  header .navBar .slideMenu {
+    width: 40%;
+    margin: 11% 0 0 -4%;
+  }
+  header .portfolio {
+    gap: 15px;
+  }
+  header .portfolio .portfolioTitle {
+    font-size: 34px;
+  }
+  header .portfolio .categories .categoryItem {
+    padding: 4px 8px;
+  }
+  header .portfolio .categories .categoryItem a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 415px) {
+  header .navBar .slideMenu {
+    width: 50%;
+    margin: 11% 0 0 -4%;
+  }
+  header .navBar .menuBarIcon span {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  header .portfolio {
+    gap: 10px;
+  }
+  header .portfolio .portfolioTitle {
+    font-size: 21px;
+  }
+}
+@media (max-width: 330px) {
+  header .navBar .slideMenu {
+    width: 60%;
+    margin: 14% 0 0 -4%;
+  }
+  header .navBar .socialList .socialItem a {
+    font-size: 16px;
+  }
+}
+.hero {
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/hero/hero.webp);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero .title {
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 78px;
+  color: #fff;
+  text-align: center;
+  font-family: "Sora", sans-serif;
+}
+.hero .countList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.hero .countList .countBox {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.hero .countList .countBox.countBoxFir {
+  justify-content: flex-end;
+}
+.hero .countList .countBox.countBoxSec {
+  justify-content: flex-start;
+}
+.hero .countList .countBox .countItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .countList .countBox .countItem .count {
+  color: #ff0004;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Sora", sans-serif;
+  text-align: center;
+}
+.hero .countList .countBox .countItem .countName {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+.hero .countList .countBox .countItem .messageBtn {
+  width: 200px;
+  margin-left: 20px;
+  padding: 15px 40px;
+  background-color: #fff;
+  color: #ff0004;
+  font-weight: 700;
+  border-radius: 40px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.hero .countList .countBox .countItem .messageBtn i {
+  transition: all 0.3s ease;
+  font-weight: 700;
+  opacity: 0;
+  visibility: hidden;
+}
+.hero .countList .countBox .countItem .messageBtn:hover {
+  background-color: #ff0004;
+  color: #000;
+}
+.hero .countList .countBox .countItem .messageBtn:hover i {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contactStick {
+  width: 50vh;
+  transform: rotate(-90deg);
+  position: fixed;
+  left: -5%;
+  top: 50%;
+}
+.contactStick .contactStickList {
+  width: 100%;
+  background-color: rgba(160, 162, 180, 0.3137254902);
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contactStick .contactStickList a {
+  color: #000;
+}
+
+.liveChat {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21285f;
+  color: #fff;
+  position: fixed;
+  margin: -20% 0 0 85%;
+  box-shadow: 1px 1px 15px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+.liveChat:hover {
+  box-shadow: 1px 1px 15px 10px rgba(255, 255, 255, 0.8);
+}
+.liveChat i {
+  margin-right: 5px;
+}
+
+@media (max-width: 1300px) {
+  .hero .countList {
+    gap: 25px;
+  }
+  .hero .countList .countBox {
+    gap: 25px;
+  }
+  .hero .countList .countBox.countBoxFir {
+    width: 40%;
+  }
+  .hero .countList .countBox.countBoxSec {
+    width: 60%;
+  }
+  .contactStick {
+    left: -8%;
+    top: 50%;
+  }
+  .liveChat {
+    margin: -25% 0 0 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .hero {
+    padding: 50px 0;
+    height: 120%;
+  }
+  .hero .countList {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hero .countList .countBox {
+    width: 100%;
+    justify-content: center;
+  }
+  .contactStick {
+    left: -11%;
+    top: 60%;
+  }
+  .liveChat {
+    margin: -20% 0 0 80%;
+  }
+}
+@media (max-width: 870px) {
+  .liveChat {
+    margin: -30% 0 0 80%;
+  }
+}
+@media (max-width: 770px) {
+  .liveChat {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .hero .title {
+    font-size: 60px;
+  }
+  .hero .countList {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hero .countList .countBox {
+    flex-direction: column;
+  }
+}
+@media (max-width: 580px) {
+  .contactStick {
+    left: -20%;
+  }
+}
+@media (max-width: 450px) {
+  .contactStick {
+    left: -30%;
+    top: 60%;
+  }
+}
+@media (max-width: 420px) {
+  .hero .title {
+    font-size: 40px;
+  }
+  .hero .countList .countBox .countItem .count {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .contactStick {
+    left: -30%;
+    top: 60%;
+  }
+}
+@media (max-width: 340px) {
+  .hero .title {
+    font-size: 30px;
+  }
+  .contactStick {
+    left: -50%;
+    top: 50%;
+  }
+}
+.companies {
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3137254902);
+}
+.companies .companiesList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.companies .companiesList .companiesBox {
+  width: 33%;
+  display: flex;
+}
+.companies .companiesList .companiesBox .companiesItem {
+  width: 50%;
+  height: 150px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+.companies .companiesList .companiesBox .companiesItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 0.3s ease;
+}
+.companies .companiesList .companiesBox .companiesItem img:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1000px) {
+  .companies .companiesList .companiesBox .companiesItem {
+    padding: 35px;
+  }
+}
+@media (max-width: 780px) {
+  .companies .companiesList {
+    flex-wrap: wrap;
+  }
+  .companies .companiesList .companiesBox {
+    width: 100%;
+  }
+  .companies .companiesList .companiesBox .companiesItem {
+    padding: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .companies {
+    padding-top: 20px;
+  }
+  .companies .companiesList .companiesBox {
+    flex-wrap: wrap;
+  }
+  .companies .companiesList .companiesBox .companiesItem {
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .companies .companiesList .companiesBox .companiesItem {
+    padding: 45px;
+  }
+}/*# sourceMappingURL=index.css.map */

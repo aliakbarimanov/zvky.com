@@ -1,0 +1,434 @@
+//! Start Header
+header {
+  width: 100%;
+
+  .headerTop {
+    width: 100%;
+    background-color: #21285f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+
+    .menuBtn {
+      width: 100px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .logo {
+      width: 137px;
+      height: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .contactBtn {
+      font-size: 13px;
+      color: #272634;
+      background-color: #eff4f5;
+      border-radius: 80px;
+      padding: 10px 22px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: rotateX(360deg);
+        background-color: #272634;
+        color: #eff4f5;
+      }
+    }
+  }
+
+  .navBar {
+    width: 100%;
+    padding: 20px 100px 20px 20px;
+    display: flex;
+    box-shadow: 0 1px 5px #00000050;
+    background-color: #fff;
+
+    .menuBarIcon {
+      display: none;
+    }
+
+    .menu {
+      width: 50%;
+      display: flex;
+      gap: 5px;
+
+      .menuItems {
+        padding: 10px;
+
+        a {
+          color: #000;
+          font-weight: 500;
+          font-size: 15px;
+          transition: all 0.3s ease;
+
+          &.active {
+            color: #fb3236;
+          }
+
+          &:hover {
+            color: #fb3236;
+          }
+        }
+      }
+    }
+
+    .slideMenu {
+      display: none;
+    }
+
+    .socialList {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 20px;
+
+      .socialItem {
+        a {
+          color: #a0a2b4;
+          font-size: 20px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+
+    width: 40%;
+    padding: 5%;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    z-index: 9999;
+
+    .portfolioTitle {
+      font-size: 44px;
+      font-weight: 700;
+      font-family: "Sora", sans-serif;
+      color: #21285f;
+      text-align: center;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .categoryItem {
+        padding: 7px 14px;
+        text-align: center;
+
+        a {
+          color: #000;
+          font-size: 20px;
+          font-weight: 500;
+          font-family: "Be Vietnam Pro", sans-serif;
+          text-align: center;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          a {
+            color: #ff0004;
+          }
+        }
+
+        &.active {
+          a {
+            color: #ff0004;
+          }
+        }
+      }
+    }
+
+    .gameDesignList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .gameDesignItem {
+        width: 100px;
+        height: 100px;
+        border-radius: 7px;
+        margin: 5px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 7px;
+          transition: all 0.3s ease;
+          opacity: 0.7;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+//! End Header
+
+//! Responsive Header Start
+@media (max-width: 1430px) {
+  header {
+    .navBar {
+      padding: 20px 50px 20px 20px;
+
+      .menu {
+        width: 75%;
+      }
+
+      .socialList {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  header {
+    .navBar {
+      padding: 15px 30px 15px 15px;
+
+      .menu {
+        width: 70%;
+
+        .menuItems {
+          padding: 5px;
+
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .socialList {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  header {
+    width: 100%;
+
+    .headerTop {
+      width: 100%;
+
+      .menuBtn {
+        width: 100px;
+      }
+      .contactBtn {
+        font-size: 13px;
+      }
+    }
+
+    .navBar {
+      justify-content: space-between;
+
+      .menuBarIcon {
+        display: block;
+        padding: 3px 3px;
+
+        i {
+          font-size: 22px;
+        }
+
+        span {
+          margin-left: 5px;
+        }
+      }
+      .menu {
+        display: none;
+      }
+
+      .slideMenu {
+        visibility: hidden;
+        opacity: 0;
+        
+        display: block;
+        width: 30%;
+        background-color: #21285f;
+        box-shadow: 1px 1px 3px #00000050;
+        position: absolute;
+        margin: 8% 0 0 -3%;
+        padding: 20px 10px;
+        z-index: 999;
+
+        .slideMenuItem {
+          padding: 10px 20px;
+
+          a {
+            color: #fff;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+
+            &.active {
+              color: #fb3236;
+            }
+
+            &:hover {
+              color: #fb3236;
+            }
+          }
+        }
+
+        .liveChatButton {
+          display: inline-block;
+          margin: 20px 0 0 10px;
+          padding: 10px;
+          color: #fb3236;
+          font-weight: 600;
+          font-size: 17px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      .socialList {
+        width: 50%;
+
+        .socialItem {
+          a {
+            color: #a0a2b4;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  header {
+    .navBar {
+      .slideMenu {
+        .liveChatButton {
+          margin: 20px 0 0 10px;
+          padding: 5px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    .headerTop {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .contactBtn {
+        display: none;
+      }
+
+      .menuBtn {
+        width: 30px;
+      }
+    }
+
+    .navBar {
+      .slideMenu {
+        width: 40%;
+        margin: 11% 0 0 -4%;
+      }
+    }
+
+    .portfolio {
+      gap: 15px;
+
+      .portfolioTitle {
+        font-size: 34px;
+      }
+
+      .categories {
+        .categoryItem {
+          padding: 4px 8px;
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  header {
+    .navBar {
+      .slideMenu {
+        width: 50%;
+        margin: 11% 0 0 -4%;
+      }
+
+      .menuBarIcon {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+header{
+  .portfolio {
+    gap: 10px;
+
+    .portfolioTitle {
+      font-size: 21px;
+    }
+  }
+}
+}
+
+@media (max-width: 330px) {
+  header {
+    .navBar {
+      .slideMenu {
+        width: 60%;
+        margin: 14% 0 0 -4%;
+      }
+
+      .socialList {
+        .socialItem {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+//! Responsive Header End
